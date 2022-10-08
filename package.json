@@ -1,0 +1,24 @@
+{
+  "name": "website_magis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleMariaMoralesRobladillo/Website_Magis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoleMariaMoralesRobladillo/Website_Magis/issues"
+  },
+  "homepage": "https://github.com/NicoleMariaMoralesRobladillo/Website_Magis#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
