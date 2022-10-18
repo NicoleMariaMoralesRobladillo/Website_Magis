@@ -28,6 +28,10 @@ html {
   border: 0;
 }
 
+header {
+  z-index: 2;
+}
+
 .navbar-toggler span {
   margin: 0;
   padding: 0;
