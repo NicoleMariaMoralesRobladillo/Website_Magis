@@ -40,7 +40,7 @@ $navbar-toggler-transition: none;
   border: 0;
 }
 header {
-  z-index: 2;
+  z-index: 3;
 }
 
 .navbar-toggler span {
@@ -153,7 +153,8 @@ $carousel-dark-control-icon-filter: invert(0.25) grayscale(10);
   z-index: 1;
 }
 h2,
-h3 {
+h3,
+.banner-title-unirse-inicio {
   z-index: 1;
 }
 
@@ -186,14 +187,28 @@ h3 {
   opacity: 0.8;
 }
 
-.unirse-inicio {
-  background-image: url(../images/unirse-inicio.JPG);
+.div-background {
   background-size: cover;
   background-position: center;
   min-height: 30rem;
 }
 
-.unirse-inicio:before,
+.unirse-inicio {
+  background-image: url(../images/unirse-inicio.JPG);
+}
+
+.conocernos-header {
+  background-image: url(../images/conocenos-header.jpeg);
+}
+
+.cut-image {
+  height: 50rem;
+  background-image: url(../images/conocenos-quienes-somos.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.div-background:before,
 .container-footer:before {
   content: "";
   width: 100%;
@@ -231,6 +246,12 @@ h3 {
 @media (min-width: 500px) {
   .big-text {
     font-size: 2.5rem !important;
+  }
+}
+@media (min-width: 576px) {
+  .banner-title-unirse-inicio {
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 600px) {

@@ -20,6 +20,7 @@
             <svg
               width="62"
               height="62"
+              class="d-block d-sm-none"
               viewBox="0 0 62 62"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +48,11 @@
                 />
               </defs>
             </svg>
+            <img
+              src="./images/proyecto-magis.svg"
+              alt=""
+              class="d-none d-sm-block"
+            />
           </a>
           <button
             class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around m-4 m-sm-5 m-lg-0 px-0 py-0 border-0"
@@ -77,7 +83,7 @@
               <li class="nav-item px-4 py-0 px-lg-0 border-bottom border-1">
                 <a
                   class="nav-link text-secondary text-navbar p-lg-0 fw-500 fs-4 lh-lg"
-                  href="#"
+                  href="./pages/conocenos.html"
                   >Conocenos</a
                 >
               </li>
@@ -182,9 +188,8 @@
             >
               <div>
                 <span class="text-primary fs-1 fw-bold lh-base big-text"
-                  >1 de cada 2 niños/as en Argentina</span
-                >
-                <span class="text-white fs-1 fw-bold lh-base big-text"
+                  >1 de cada 2 niños/as en Argentina&nbsp;</span
+                ><span class="text-white fs-1 fw-bold lh-base big-text"
                   >vive en situación de pobreza</span
                 >
               </div>
@@ -197,9 +202,8 @@
             >
               <div>
                 <span class="text-primary fs-1 fw-bold lh-base big-text"
-                  >Solo 3 de cada 10 personas de sectores</span
-                >
-                <span class="text-white fs-1 fw-bold lh-base big-text"
+                  >Solo 3 de cada 10 personas de sectores&nbsp;</span
+                ><span class="text-white fs-1 fw-bold lh-base big-text"
                   >vulnerables terminan el secundario</span
                 >
               </div>
@@ -212,9 +216,8 @@
             >
               <div>
                 <span class="text-primary fs-1 fw-bold lh-base big-text"
-                  >Solo 1 de cada 10 jóvenes de los sectores</span
-                >
-                <span class="text-white fs-1 fw-bold lh-base big-text"
+                  >Solo 1 de cada 10 jóvenes de los sectores&nbsp;</span
+                ><span class="text-white fs-1 fw-bold lh-base big-text"
                   >más pobres acceden a la universidad</span
                 >
               </div>
@@ -227,9 +230,8 @@
             >
               <div>
                 <span class="text-primary fs-1 fw-bold lh-base big-text"
-                  >4 de cada 10 niños/as terminan</span
-                >
-                <span class="text-white fs-1 fw-bold lh-base big-text"
+                  >4 de cada 10 niños/as terminan&nbsp;</span
+                ><span class="text-white fs-1 fw-bold lh-base big-text"
                   >la primaria sin comprender textos</span
                 >
               </div>
@@ -255,7 +257,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <div class="text-center p-4 py-sm-5 mx-sm-4">
+      <div class="container p-4 px-sm-0 py-sm-5">
         <div class="row gap-4 align-items-center justify-content-center">
           <div class="col">
             <img src="./images/inicio-conocenos.JPG" class="img-fluid" alt="" />
@@ -278,12 +280,14 @@
               </p>
             </div>
             <div>
-              <button
-                type="button"
-                class="btn btn-primary fs-5 text-white rounded-pill py-2 px-4"
-              >
-                Leer más
-              </button>
+              <a href="./pages/conocenos.html">
+                <button
+                  type="button"
+                  class="btn btn-primary fs-5 text-white rounded-pill py-2 px-4"
+                >
+                  Leer más
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -297,7 +301,7 @@
           <div class="row px-4 pb-3">
             <div class="col-12 col-md-6 p-3">
               <div
-                class="card-container position-relative overflow-hidden d-flex justify-content-center align-items-center mb-sm-3"
+                class="card-container position-relative overflow-hidden d-flex justify-content-center justify-content-md-end align-items-center mb-sm-3"
               >
                 <div
                   class="card card-front card-front--educacion position-absolute w-100 h-100 rounded-4 border border-0"
@@ -330,7 +334,7 @@
             </div>
             <div class="col-12 col-md-6 p-3">
               <div
-                class="card-container position-relative overflow-hidden d-flex justify-content-center align-items-center mb-sm-3"
+                class="card-container position-relative overflow-hidden d-flex justify-content-center justify-content-md-start align-items-center mb-sm-3"
               >
                 <div
                   class="card card-front card-front--familia position-absolute w-100 h-100 rounded-4 border border-0"
@@ -368,11 +372,15 @@
       <div class="container-fluid text-center m-0 p-0">
         <div class="position-relative">
           <div
-            class="d-flex flex-column gap-3 px-3 unirse-inicio d-flex align-items-center justify-content-center"
+            class="d-flex flex-column gap-3 px-3 div-background unirse-inicio d-flex align-items-center justify-content-center"
           >
-            <h2 class="fw-bold fs-1 lh-base text-white big-text-2">
-              Estamos para construir un futuro mejor para nuestros niños/as.
-            </h2>
+            <div class="banner-title-unirse-inicio">
+              <span class="fw-bold fs-1 lh-base text-white big-text-2">
+                Estamos para construir un futuro mejor&nbsp;</span
+              ><span class="fw-bold fs-1 lh-base text-white big-text-2"
+                >para nuestros niños/as.
+              </span>
+            </div>
             <div class="button-box">
               <button
                 type="button"
