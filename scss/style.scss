@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*TEXTO*/
+
 * {
   font-family: "Poppins", sans-serif;
 }
 html {
   font-size: 62.5%;
 }
-$navbar-padding-x: 0 rem;
-$dropdown-border-radius: 0;
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+/*COLORES*/
+
 $dark: #0b1210;
 $primary: #f9a032;
 $secondary: #484848;
@@ -17,18 +24,30 @@ $theme-colors: (
   "dark": $dark,
   "light": $light,
 );
-.nav-item {
-  border-color: #d6d6d6;
+
+/*Z-INDEX*/
+
+.z-index-1 {
+  z-index: 1;
 }
 
+/*HEADER*/
+
+header {
+  z-index: 3;
+}
+
+/*NAVBAR*/
+
+$navbar-padding-x: 0 rem;
+
+/*Nav Toggler*/
 $navbar-toggler-border-radius: 0;
 $navbar-toggler-focus-width: 0;
 $navbar-toggler-transition: none;
-
 .navbar-toggler {
   width: 35px;
   height: 31px;
-  position: relative;
   transition: 0.5s ease-in-out;
 }
 .navbar-toggler,
@@ -39,15 +58,6 @@ $navbar-toggler-transition: none;
   box-shadow: none;
   border: 0;
 }
-header {
-  z-index: 3;
-}
-
-.navbar-toggler span {
-  margin: 0;
-  padding: 0;
-}
-
 .toggler-icon {
   display: block;
   position: absolute;
@@ -63,12 +73,10 @@ header {
 .middle-bar {
   margin-top: 0px;
 }
-
 .navbar-toggler .top-bar {
   margin-top: 0px;
   transform: rotate(135deg);
 }
-
 .navbar-toggler .middle-bar {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -77,7 +85,6 @@ header {
   margin-top: 0px;
   transform: rotate(-135deg);
 }
-
 .navbar-toggler.collapsed .top-bar {
   margin-top: -25px;
   transform: rotate(0deg);
@@ -91,9 +98,47 @@ header {
   transform: rotate(0deg);
 }
 
-.fw-500 {
-  font-weight: 500 !important;
+/*Dropdown*/
+$dropdown-border-radius: 0;
+
+/*Nav Item*/
+.nav-item {
+  border-color: #d6d6d6;
 }
+
+/*OJO**********************************************************************/
+
+.margin-left-6 {
+  margin-left: 2.5rem;
+}
+.margin-right-6 {
+  margin-right: 2.5rem;
+}
+.margin-bottom-6 {
+  margin-bottom: 2.5rem;
+}
+.nav-link {
+  margin-left: 2.5rem;
+}
+.padding-left-6 {
+  padding-left: 2.5rem !important;
+}
+.padding-right-6 {
+  padding-right: 2.5rem !important;
+}
+.padding-top-6 {
+  padding-top: 2.5rem;
+}
+.padding-bottom-6 {
+  padding-bottom: 2.5rem;
+}
+
+$dropdown-item-padding-x: 5rem;
+
+/*OJO*********************************************************************+/
+
+
+/*CARROUSEL*/
 .carousel-inner,
 .carousel-item {
   max-height: 600px !important;
@@ -101,7 +146,6 @@ header {
 .active {
   background-color: $primary !important;
 }
-
 $carousel-indicator-active-bg: #d9d9d9b0;
 $carousel-indicator-opacity: 1;
 $carousel-indicator-height: 0.3rem;
@@ -114,110 +158,74 @@ $carousel-control-next-icon-bg: url("../images/carousel-control-next-icon-bg.svg
 $carousel-dark-indicator-active-bg: #d9d9d9b0;
 $carousel-dark-control-icon-filter: invert(0.25) grayscale(10);
 
+/*CARD*/
+
 .card-container {
   min-height: 300px;
 }
-
-.card-container:hover .card-front {
-  transform: rotateY(180deg);
-}
-
-.card-container:hover .card-back {
-  transform: rotateY(0deg);
-}
-
+.card-container:hover .card-front,
 .card-back {
   transform: rotateY(180deg);
 }
-
-//
-.card-front {
-  background-size: cover;
-  background-position: center;
+.card-container:hover .card-back {
+  transform: rotateY(0deg);
 }
-.card-front--educacion {
-  background-image: url(../images/eje-educacion.JPG);
-}
-
-.card-front--familia {
-  background-image: url(../images/eje-familia.jpg);
-}
-
 .card {
   transition: all 0.9s;
   backface-visibility: hidden;
   max-width: 35rem;
 }
-
-.card-title {
-  z-index: 1;
+.background {
+  background-size: cover;
+  background-position: center;
 }
-h2,
-h3,
-.banner-title-unirse-inicio {
-  z-index: 1;
-}
-
-.card-front:before {
+.background_degradado:before {
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
+  position: absolute;
+}
+.background_degradado--negro:before {
+  background-color: $dark;
+  opacity: 0.6;
+}
+.background_degradado--primary:before {
   background-color: $primary;
   opacity: 0.8;
   border-radius: 1rem;
 }
-
-.ejes-del-proyecto {
-  background-image: url(../images/ejes-fondo.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-.ejes-del-proyecto:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.background_degradado--light:before {
   background-color: $light;
   opacity: 0.8;
 }
 
-.div-background {
-  background-size: cover;
-  background-position: center;
+.background--ejes-del-proyecto {
+  background-image: url(../images/ejes-fondo.jpeg);
+}
+.background--ejes-del-proyecto__educacion {
+  background-image: url(../images/eje-educacion.JPG);
+}
+.background--ejes-del-proyecto__familia {
+  background-image: url(../images/eje-familia.jpg);
+}
+.background--footer {
+  background-image: url(../images/footer.jpeg);
+}
+
+.background--unirse-inicio {
+  background-image: url(../images/unirse-inicio.JPG);
   min-height: 30rem;
 }
 
-.unirse-inicio {
-  background-image: url(../images/unirse-inicio.JPG);
-}
-
-.conocernos-header {
+.background--header-conocenos {
   background-image: url(../images/conocenos-header.jpeg);
 }
 
-.cut-image {
+.background--conocenos-quienes-somos {
   height: 50rem;
   background-image: url(../images/conocenos-quienes-somos.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.div-background:before,
-.container-footer:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: $dark;
-  opacity: 0.6;
-  position: absolute;
 }
 
 .button-box {
@@ -226,22 +234,32 @@ h3,
 .imageBox {
   max-width: 20rem;
 }
-.container-footer {
-  background-image: url(../images/footer.jpeg);
-  background-position: center;
-  background-size: cover;
-}
-.col,
-.footer__column {
-  z-index: 1;
-}
-.footer__column {
-  width: 100%;
-}
 .icon {
   width: 35px;
   height: 35px;
 }
+
+#carrousel-estadisticas-inicio {
+  grid-area: carrousel-estadisticas-inicio;
+}
+
+.myContainer {
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+#programas-inicio {
+  grid-area: programas-inicio;
+}
+
+#unirse-inicio {
+  grid-area: unirse-inicio;
+}
+
+#ODS-inicio {
+  grid-area: ODS-inicio;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @media (min-width: 500px) {
   .big-text {
@@ -260,17 +278,17 @@ h3,
   }
 }
 @media (min-width: 768px) {
-  .footer__column {
-    width: calc(100% / 3);
-  }
-  .footer__row {
-    flex-direction: row !important;
-  }
   .big-text {
     font-size: 4rem !important;
   }
   .big-text-2 {
     font-size: 3rem !important;
+  }
+  .padding-right-25 {
+    padding-right: 1.25rem !important;
+  }
+  .padding-left-25 {
+    padding-left: 1.25rem !important;
   }
 }
 @media (min-width: 992px) {
@@ -280,6 +298,24 @@ h3,
   #navbarNavDropdown {
     background-color: $dark !important;
   }
+  /*OJO*********************************************************/
+  .margin-right-6 {
+    margin-right: 6% !important;
+  }
+  .margin-left-6 {
+    margin-left: 6%;
+  }
+  .margin-bottom-6 {
+    margin-bottom: 5rem;
+  }
+  .nav-link {
+    margin-left: 0;
+  }
+  .myContainer {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+  /*OJO*********************************************************/
   .text-navbar {
     color: white !important;
   }
