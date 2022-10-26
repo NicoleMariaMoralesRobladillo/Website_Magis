@@ -1,19 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-/*TEXTO*/
+/*******************************************VARIABLES*******************************************/
 
-* {
-  font-family: "Poppins", sans-serif;
-}
-html {
-  font-size: 62.5%;
-}
-.fw-500 {
-  font-weight: 500 !important;
-}
+/*Font Weight*/
+$font-weight-normal_plus: 500;
 
-/*COLORES*/
-
+/*Colores*/
 $dark: #0b1210;
 $primary: #f9a032;
 $secondary: #484848;
@@ -25,127 +17,44 @@ $theme-colors: (
   "light": $light,
 );
 
-/*Z-INDEX*/
+/*Size*/
+$mySize: 2.5rem;
+$mySize2: 6%;
 
-.z-index-1 {
-  z-index: 1;
-}
+/*Properties*/
+$propiety: ("margin", "padding");
+$direction: ("left", "right", "top", "bottom");
 
-/*HEADER*/
-
-header {
-  z-index: 3;
-}
-
-/*NAVBAR*/
-
+/*Navbar*/
 $navbar-padding-x: 0 rem;
-
-/*Nav Toggler*/
 $navbar-toggler-border-radius: 0;
 $navbar-toggler-focus-width: 0;
 $navbar-toggler-transition: none;
-.navbar-toggler {
-  width: 35px;
-  height: 31px;
-  transition: 0.5s ease-in-out;
-}
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-  outline: none;
-  box-shadow: none;
-  border: 0;
-}
-.toggler-icon {
-  display: block;
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  background-color: $primary;
-  border-radius: 50px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: 0.25s ease-in-out;
-}
-.middle-bar {
-  margin-top: 0px;
-}
-.navbar-toggler .top-bar {
-  margin-top: 0px;
-  transform: rotate(135deg);
-}
-.navbar-toggler .middle-bar {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.navbar-toggler .bottom-bar {
-  margin-top: 0px;
-  transform: rotate(-135deg);
-}
-.navbar-toggler.collapsed .top-bar {
-  margin-top: -25px;
-  transform: rotate(0deg);
-}
-.navbar-toggler.collapsed .middle-bar {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-.navbar-toggler.collapsed .bottom-bar {
-  margin-top: 25px;
-  transform: rotate(0deg);
-}
 
-/*Dropdown*/
+/*Navbar Dropdown*/
 $dropdown-border-radius: 0;
+$dropdown-item-padding-x: $mySize * 2;
 
-/*Nav Item*/
-.nav-item {
-  border-color: #d6d6d6;
-}
+/*Background*/
+$background: (
+  "ejes-del-proyecto" url(../images/ejes-fondo.jpeg) auto,
+  "footer" url(../images/footer.jpeg) auto,
+  "unirse-inicio" url(../images/unirse-inicio.JPG) 37rem,
+  "header-conocenos" url(../images/conocenos-header.jpeg) 25rem,
+  "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
+  "testimonios-conocenos" url(../images/slider2-1.png) auto
+);
+$background--ejes-del-proyecto: (
+  "educacion": url(../images/eje-educacion.JPG),
+  "familia": url(../images/eje-familia.jpg),
+);
+$background-degradado: (
+  "negro" $dark 0.6 0,
+  "primary" $primary 0.8 1rem,
+  "light" $light 0.8 0
+);
 
-/*OJO**********************************************************************/
-
-.margin-left-6 {
-  margin-left: 2.5rem;
-}
-.margin-right-6 {
-  margin-right: 2.5rem;
-}
-.margin-bottom-6 {
-  margin-bottom: 2.5rem;
-}
-.nav-link {
-  margin-left: 2.5rem;
-}
-.padding-left-6 {
-  padding-left: 2.5rem !important;
-}
-.padding-right-6 {
-  padding-right: 2.5rem !important;
-}
-.padding-top-6 {
-  padding-top: 2.5rem;
-}
-.padding-bottom-6 {
-  padding-bottom: 2.5rem;
-}
-
-$dropdown-item-padding-x: 5rem;
-
-/*OJO*********************************************************************+/
-
-
-/*CARROUSEL*/
-.carousel-inner,
-.carousel-item {
-  max-height: 600px !important;
-}
-.active {
-  background-color: $primary !important;
-}
+/*Carousel*/
 $carousel-indicator-active-bg: #d9d9d9b0;
 $carousel-indicator-opacity: 1;
 $carousel-indicator-height: 0.3rem;
@@ -158,118 +67,277 @@ $carousel-control-next-icon-bg: url("../images/carousel-control-next-icon-bg.svg
 $carousel-dark-indicator-active-bg: #d9d9d9b0;
 $carousel-dark-control-icon-filter: invert(0.25) grayscale(10);
 
-/*CARD*/
+/*******************************************TEXTO*******************************************/
 
-.card-container {
-  min-height: 300px;
+* {
+  font-family: "Poppins", sans-serif;
 }
-.card-container:hover .card-front,
-.card-back {
-  transform: rotateY(180deg);
+html {
+  font-size: 62.5%;
 }
-.card-container:hover .card-back {
-  transform: rotateY(0deg);
+
+/*******************************************Z-INDEX*******************************************/
+
+.z-index-1 {
+  z-index: 1;
 }
+.z-index-2 {
+  z-index: 2;
+}
+.z-index-3 {
+  z-index: 3;
+}
+
+/*******************************************CONTAINER*******************************************/
+
+.myContainer {
+  padding-right: $mySize;
+  padding-left: $mySize;
+}
+.my {
+  @each $propiety1 in $propiety {
+    &-#{$propiety1} {
+      @each $position in $direction {
+        &-#{$position} {
+          #{$propiety1}-#{$position}: $mySize !important;
+        }
+      }
+    }
+  }
+}
+
+/*******************************************NAVBAR*******************************************/
+
+/*Nav Toggler*/
+.navbar-toggler {
+  width: 35px;
+  height: 31px;
+  transition: 0.5s ease-in-out;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  &__icon {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: $primary;
+    border-radius: 50px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    &--top-bar {
+      margin-top: 0px;
+      transform: rotate(135deg);
+    }
+    &--middle-bar {
+      opacity: 0;
+      margin-top: 0px;
+      filter: alpha(opacity=0);
+    }
+    &--bottom-bar {
+      margin-top: 0px;
+      transform: rotate(-135deg);
+    }
+  }
+  &.collapsed {
+    .navbar-toggler__icon--top-bar {
+      margin-top: -25px;
+      transform: rotate(0deg);
+    }
+    .navbar-toggler__icon--middle-bar {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+    .navbar-toggler__icon--bottom-bar {
+      margin-top: 25px;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+/*Nav Item*/
+.nav-item {
+  border-color: #d6d6d6;
+}
+
+/*Nav Dropdown*/
+#navbarNavDropdown {
+  background-color: $light;
+  margin-right: 0;
+}
+
+/*Nav Link*/
+.nav-link {
+  margin-left: $mySize;
+}
+
+/*******************************************BACKGROUND*******************************************/
+
+.background {
+  background-size: cover;
+  background-position: center;
+  @each $section, $url, $height in $background {
+    &--#{$section} {
+      background-image: $url;
+      height: $height;
+      @if $section == "ejes-del-proyecto" {
+        @each $section-ejes-del-proyecto,
+          $url-ejes-del-proyecto in $background--ejes-del-proyecto
+        {
+          &__#{$section-ejes-del-proyecto} {
+            background-image: $url-ejes-del-proyecto;
+          }
+        }
+      }
+    }
+  }
+  &-degradado {
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    @each $name, $color, $opacity, $border-radius in $background-degradado {
+      &--#{$name}:before {
+        background-color: $color;
+        opacity: $opacity;
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
+
+/*******************************************CARD*******************************************/
+
 .card {
   transition: all 0.9s;
   backface-visibility: hidden;
   max-width: 35rem;
-}
-.background {
-  background-size: cover;
-  background-position: center;
-}
-.background_degradado:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-}
-.background_degradado--negro:before {
-  background-color: $dark;
-  opacity: 0.6;
-}
-.background_degradado--primary:before {
-  background-color: $primary;
-  opacity: 0.8;
-  border-radius: 1rem;
-}
-.background_degradado--light:before {
-  background-color: $light;
-  opacity: 0.8;
+  &-container {
+    min-height: 300px;
+    &:hover {
+      & .card-front {
+        transform: rotateY(180deg);
+      }
+      & .card-back {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+  &-back {
+    transform: rotateY(180deg);
+  }
 }
 
-.background--ejes-del-proyecto {
-  background-image: url(../images/ejes-fondo.jpeg);
-}
-.background--ejes-del-proyecto__educacion {
-  background-image: url(../images/eje-educacion.JPG);
-}
-.background--ejes-del-proyecto__familia {
-  background-image: url(../images/eje-familia.jpg);
-}
-.background--footer {
-  background-image: url(../images/footer.jpeg);
-}
+/*******************************************CAROUSEL*******************************************/
 
-.background--unirse-inicio {
-  background-image: url(../images/unirse-inicio.JPG);
-  min-height: 37rem;
+.carousel-inner--max,
+.carousel-item--max {
+  max-height: 600px;
 }
-
-.background--header-conocenos {
-  background-image: url(../images/conocenos-header.jpeg);
-}
-
-.background--conocenos-quienes-somos {
-  height: 50rem;
-  background-image: url(../images/conocenos-quienes-somos.jpg);
-}
-
-.button-box {
-  z-index: 1;
+.active {
+  background-color: $primary !important;
 }
 .imageBox {
   max-width: 20rem;
 }
+.foto-testimonio {
+  width: 7rem;
+  height: 7rem;
+}
+.carousel-item--testimonios {
+  height: 50rem;
+}
+.row--testimonios-voluntarios {
+  height: auto;
+}
+.testimonio-voluntario__parrafo {
+  overflow-y: scroll;
+  scrollbar-color: #484848 #dddddd;
+  scrollbar-width: 20px;
+  padding-right: 1rem;
+}
+
+.testimonio-voluntario__parrafo::-webkit-scrollbar {
+  width: 10px;
+}
+
+.testimonio-voluntario__parrafo::-webkit-scrollbar-track {
+  background-color: #dddddd;
+  border-radius: 20px;
+}
+
+.testimonio-voluntario__parrafo::-webkit-scrollbar-thumb {
+  background-color: #484848;
+  border-radius: 20px;
+}
+
+.testimonio-voluntario__parrafo::-webkit-scrollbar-thumb:hover {
+  background-color: #484848;
+}
+
+/*******************************************FOOTER*******************************************/
+
 .icon {
   width: 35px;
   height: 35px;
 }
 
-#carrousel-estadisticas-inicio {
-  grid-area: carrousel-estadisticas-inicio;
-}
-
-.myContainer {
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
-}
-
-#programas-inicio {
-  grid-area: programas-inicio;
-}
-
-#unirse-inicio {
-  grid-area: unirse-inicio;
-}
-
-#ODS-inicio {
-  grid-area: ODS-inicio;
-}
+/*******************************************API********************************************/
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-weight":
+      map-merge(
+        map-get($utilities, "font-weight"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "font-weight"), "values"),
+              (
+                normal_plus: $font-weight-normal_plus,
+              )
+            ),
+        )
+      ),
+  )
+);
+@import "../node_modules/bootstrap/scss/utilities/api.scss";
+
+/*******************************************MEDIA QUERYS********************************************/
+@media (min-width: 230px) {
+  .carousel-item--testimonios {
+    height: 90rem;
+  }
+}
+@media (min-width: 260px) {
+  .carousel-item--testimonios {
+    height: 70rem;
+  }
+}
+@media (min-width: 280px) {
+  .carousel-item--testimonios {
+    height: 60rem;
+  }
+}
+@media (min-width: 370px) {
+  .carousel-item--testimonios {
+    height: 45rem;
+  }
+}
 @media (min-width: 500px) {
   .big-text {
     font-size: 2.5rem !important;
   }
-}
-@media (min-width: 576px) {
-  .banner-title-unirse-inicio {
-    display: flex;
-    flex-direction: column;
+  .carousel-item--testimonios {
+    height: 35rem;
   }
 }
 @media (min-width: 600px) {
@@ -277,54 +345,56 @@ $carousel-dark-control-icon-filter: invert(0.25) grayscale(10);
     font-size: 3rem !important;
   }
 }
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
   .big-text {
     font-size: 4rem !important;
+    &-2 {
+      font-size: 3rem !important;
+    }
   }
-  .big-text-2 {
-    font-size: 3rem !important;
-  }
-  .padding-right-25 {
-    padding-right: 1.25rem !important;
-  }
-  .padding-left-25 {
-    padding-left: 1.25rem !important;
+  .padding {
+    @each $position in $direction {
+      &-#{$position}-25 {
+        padding-#{$position}: calc($mySize/2) !important;
+      }
+    }
   }
 }
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
   html {
     font-size: 70.5%;
   }
+  .carousel-item--testimonios {
+    height: 30rem;
+  }
   #navbarNavDropdown {
-    background-color: $dark !important;
+    background-color: $dark;
+    margin-right: $mySize2;
   }
-  /*OJO*********************************************************/
-  .margin-right-6 {
-    margin-right: 6% !important;
-  }
-  .margin-left-6 {
-    margin-left: 6%;
-  }
-  .margin-bottom-6 {
-    margin-bottom: 5rem;
-  }
-  .nav-link {
-    margin-left: 0;
+  .my-margin {
+    @each $position in $direction {
+      &-#{$position} {
+        @if $position == "bottom" {
+          margin-bottom: calc($mySize * 2) !important;
+        } @else {
+          margin-#{$position}: $mySize2 !important;
+        }
+      }
+    }
   }
   .myContainer {
-    padding-right: 6%;
-    padding-left: 6%;
+    padding-right: $mySize2;
+    padding-left: $mySize2;
   }
-  /*OJO*********************************************************/
   .text-navbar {
     color: white !important;
   }
   .nav-item {
     border: 0 !important;
-  }
-  .nav-item-selected {
-    border-color: #f9a032 !important;
-    border-width: 0.2rem !important;
+    &-selected {
+      border-color: $primary !important;
+      border-width: 0.2rem !important;
+    }
   }
   .imageBox {
     max-width: 15rem;

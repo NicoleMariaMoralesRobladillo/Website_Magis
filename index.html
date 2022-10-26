@@ -4,28 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- TÍTULO -->
+    <title>Inicio | Proyecto Magis</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="#" />
+    <!-- LOGO -->
+    <link rel="shortcut icon" href="./images/logo-icon.svg" />
   </head>
   <body>
-    <header class="position-sticky top-0 left-0 bg-dark">
+    <header class="position-sticky top-0 left-0 bg-dark z-index-3">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div id="navbarNav" class="container-fluid p-0">
-          <a class="navbar-brand me-0 p-0 margin-left-6 my-4" href="#">
+          <a
+            class="navbar-brand me-0 p-0 my-margin-left my-4"
+            href="./index.html"
+          >
             <img
               src="./images/logo-icon.svg"
-              alt=""
+              alt="Logo pequeño de Magis"
               class="d-block d-sm-none"
             />
             <img
               src="./images/proyecto-magis.svg"
-              alt=""
+              alt="Logo de Magis"
               class="d-none d-sm-block"
             />
           </a>
           <button
-            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around ms-0 p-0 border-0 position-relative margin-right-6 my-4"
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around ms-0 p-0 border-0 position-relative my-margin-right my-4"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavDropdown"
@@ -33,34 +39,40 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="toggler-icon top-bar"></span>
-            <span class="toggler-icon middle-bar"></span>
-            <span class="toggler-icon bottom-bar"></span>
+            <span
+              class="navbar-toggler__icon navbar-toggler__icon--top-bar"
+            ></span>
+            <span
+              class="navbar-toggler__icon navbar-toggler__icon--middle-bar"
+            ></span>
+            <span
+              class="navbar-toggler__icon navbar-toggler__icon--bottom-bar"
+            ></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end bg-light m-0 margin-right-6"
+            class="collapse navbar-collapse justify-content-end"
             id="navbarNavDropdown"
           >
             <ul class="navbar-nav gap-lg-5">
-              <li class="nav-item-selected p-0 border-bottom">
+              <li class="nav-item-selected p-0 border-bottom border-1">
                 <a
-                  class="nav-link text-primary fw-semibold text-navbar p-lg-0 fs-4 lh-lg"
+                  class="nav-link text-primary fw-semibold text-navbar p-lg-0 fs-4 lh-lg ms-lg-0"
                   aria-current="page"
-                  href="#"
+                  href="./index.html"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item p-0 border-bottom border-1">
                 <a
-                  class="nav-link text-secondary text-navbar p-lg-0 fw-500 fs-4 lh-lg"
+                  class="nav-link text-secondary text-navbar p-lg-0 fw-normal_plus fs-4 lh-lg ms-lg-0"
                   href="./pages/conocenos.html"
                   >Conocenos</a
                 >
               </li>
-              <li class="nav-item dropdown p-0 border-bottom">
+              <li class="nav-item dropdown p-0 border-bottom border-1">
                 <a
-                  class="nav-link text-secondary text-navbar px-0 p-lg-0 fw-500 fs-4 lh-lg"
-                  href="#"
+                  class="nav-link text-secondary text-navbar px-0 p-lg-0 fw-normal_plus fs-4 lh-lg ms-lg-0"
+                  href="./pages/programas.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -81,24 +93,24 @@
                   </svg>
                 </a>
                 <ul class="dropdown-menu border border-0 p-0 bg-light">
-                  <li class="border-bottom border-top">
+                  <li class="border-bottom border-top border-1">
                     <a
                       class="dropdown-item py-2 px-lg-3 fw-normal fs-4 lh-lg"
-                      href="#"
+                      href="./pages/programas.html"
                       >Nuestros ejes</a
                     >
                   </li>
-                  <li class="border-bottom">
+                  <li class="border-bottom border-1">
                     <a
                       class="dropdown-item py-2 px-lg-3 fw-normal fs-4 lh-lg"
-                      href="#"
+                      href="./pages/programas.html"
                       >Nuestras actividades</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item py-2 px-lg-3 fw-normal fs-4 lh-lg"
-                      href="#"
+                      href="./pages/programas.html"
                       >FAQ</a
                     >
                   </li>
@@ -106,8 +118,8 @@
               </li>
               <li class="nav-item p-0 border-bottom">
                 <a
-                  class="nav-link text-secondary text-navbar p-lg-0 fw-500 fs-4 lh-lg"
-                  href="#"
+                  class="nav-link text-secondary text-navbar p-lg-0 fw-normal_plus fs-4 lh-lg ms-lg-0"
+                  href="./pages/contactanos.html"
                   >Contactanos</a
                 >
               </li>
@@ -118,7 +130,7 @@
     </header>
     <main>
       <!-- Carrousel de estadísticas -->
-      <section id="carrousel-estadisticas-inicio" class="margin-bottom-6">
+      <section id="carrousel-estadisticas-inicio" class="my-margin-bottom">
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -152,12 +164,12 @@
               aria-label="Slide 4"
             ></button>
           </div>
-          <div class="carousel-inner h-50">
-            <div class="carousel-item active">
+          <div class="carousel-inner carousel-inner--max h-50">
+            <div class="carousel-item active carousel-item--max">
               <img
                 src="./images/slider1-1.png"
                 class="d-block w-100"
-                alt="..."
+                alt="1 de cada 2 niños/as en Argentina vive en situación de pobreza"
               />
               <div
                 class="carousel-caption top-0 d-flex justify-content-center align-items-center"
@@ -171,11 +183,11 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item carousel-item--max">
               <img
                 src="./images/slider1-2.png"
                 class="d-block w-100"
-                alt="..."
+                alt="Solo 3 de cada 10 personas de sectores vulnerables terminan el secundario"
               />
               <div
                 class="carousel-caption top-0 d-flex justify-content-center align-items-center"
@@ -189,11 +201,11 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item carousel-item--max">
               <img
                 src="./images/slider1-3.png"
                 class="d-block w-100"
-                alt="..."
+                alt="Solo 1 de cada 10 jóvenes de los sectores más pobres acceden a la universidad"
               />
               <div
                 class="carousel-caption top-0 d-flex justify-content-center align-items-center"
@@ -207,11 +219,11 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item carousel-item--max">
               <img
                 src="./images/slider1-4.png"
                 class="d-block w-100"
-                alt="..."
+                alt=" 4 de cada 10 niños/as terminan la primaria sin comprender textos"
               />
               <div
                 class="carousel-caption top-0 d-flex justify-content-center align-items-center"
@@ -247,16 +259,16 @@
         </div>
       </section>
       <!-- Conocenos -->
-      <section id="conocenos-inicio" class="w-100 margin-bottom-6 myContainer">
+      <section id="conocenos-inicio" class="w-100 my-margin-bottom myContainer">
         <div class="p-0">
           <div class="row align-items-center justify-content-center">
             <div
-              class="col-12 col-md-6 padding-bottom-6 pb-md-0 padding-right-25"
+              class="col-12 col-md-6 my-padding-bottom pb-md-0 padding-right-25"
             >
               <img
                 src="./images/inicio-conocenos.JPG"
-                class="img-fluid"
-                alt=""
+                class="img-fluid rounded-4"
+                alt="Actividades con niños en Proyecto Magis"
               />
             </div>
             <div
@@ -300,7 +312,7 @@
       <section id="programas-inicio">
         <div class="text-center m-0 p-0 position-relative">
           <div
-            class="background background--ejes-del-proyecto background_degradado background_degradado--light d-flex flex-column gap-3 px-0 overflow-hidden w-100 padding-top-6 padding-bottom-6"
+            class="background background--ejes-del-proyecto background-degradado background-degradado--light d-flex flex-column gap-3 px-0 overflow-hidden w-100 my-padding-top my-padding-bottom"
           >
             <h2 class="fw-bold fs-5 lh-base text-primary m-0 p-0 z-index-1">
               Programas
@@ -310,13 +322,13 @@
             </h3>
             <div class="row m-0 p-0 gutter">
               <div
-                class="col-12 col-md-6 padding-left-6 padding-right-6 padding-bottom-6 pb-md-0 padding-right-25"
+                class="col-12 col-md-6 my-padding-left my-padding-right my-padding-bottom pb-md-0 padding-right-25"
               >
                 <div
                   class="card-container position-relative overflow-hidden d-flex justify-content-center justify-content-md-end align-items-center m-0"
                 >
                   <div
-                    class="card card-front position-absolute w-100 h-100 rounded-4 border border-0 background background--ejes-del-proyecto__educacion background_degradado background_degradado--primary"
+                    class="card card-front position-absolute w-100 h-100 rounded-4 border border-0 background background--ejes-del-proyecto__educacion background-degradado background-degradado--primary"
                   >
                     <div
                       class="card-body d-flex justify-content-center align-items-center position-relative"
@@ -349,13 +361,13 @@
                 </div>
               </div>
               <div
-                class="col-12 col-md-6 padding-left-6 padding-right-6 padding-left-25"
+                class="col-12 col-md-6 my-padding-left my-padding-right padding-left-25"
               >
                 <div
                   class="card-container position-relative overflow-hidden d-flex justify-content-center justify-content-md-start align-items-center m-0"
                 >
                   <div
-                    class="card card-front position-absolute w-100 h-100 rounded-4 border border-0 background background--ejes-del-proyecto__familia background_degradado background_degradado--primary"
+                    class="card card-front position-absolute w-100 h-100 rounded-4 border border-0 background background--ejes-del-proyecto__familia background-degradado background-degradado--primary"
                   >
                     <div
                       class="card-body d-flex justify-content-center align-items-center position-relative"
@@ -391,33 +403,35 @@
         </div>
       </section>
       <!-- Unirse -->
-      <section id="unirse-inicio" class="margin-bottom-6">
+      <section id="unirse-inicio" class="my-margin-bottom">
         <div class="container-fluid text-center m-0 p-0">
           <div class="position-relative">
             <div
-              class="d-flex flex-column gap-3 d-flex align-items-center justify-content-center padding-left-6 padding-right-6 padding-top-6 padding-bottom-6 background background--unirse-inicio background_degradado background_degradado--negro"
+              class="d-flex flex-column gap-3 d-flex align-items-center justify-content-center my-padding-left my-padding-right my-padding-top my-padding-bottom background background--unirse-inicio background-degradado background-degradado--negro"
             >
-              <div class="z-index-1 banner-title-unirse-inicio">
+              <div class="z-index-1 d-sm-flex flex-sm-column">
                 <span class="fw-bold fs-1 lh-base text-white big-text-2">
                   Estamos para construir un futuro mejor&nbsp;</span
                 ><span class="fw-bold fs-1 lh-base text-white big-text-2"
                   >para nuestros niños/as.
                 </span>
               </div>
-              <div class="button-box">
-                <button
-                  type="button"
-                  class="btn btn-primary fs-5 text-white rounded-pill py-2 px-4 border-0"
-                >
-                  Únete a nosotros
-                </button>
+              <div class="z-index-1">
+                <a href="./pages/contactanos.html">
+                  <button
+                    type="button"
+                    class="btn btn-primary fs-5 text-white rounded-pill py-2 px-4 border-0"
+                  >
+                    Únete a nosotros
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Objetivos de desarrollo sostenible -->
-      <section id="ODS-inicio" class="margin-bottom-6">
+      <section id="ODS-inicio" class="my-margin-bottom">
         <div class="text-center m-0 p-0">
           <div class="d-flex flex-column gap-3 overflow-hidden w-100 m-0 p-0">
             <h2 class="fw-bold fs-5 lh-base text-primary m-0 z-index-1">
@@ -497,7 +511,7 @@
                       <img
                         src="./images/ODS1.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 1: Fin de la pobreza"
                       />
                     </div>
                   </div>
@@ -508,7 +522,7 @@
                       <img
                         src="./images/ODS3.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 3: Salud y bienestar"
                       />
                     </div>
                   </div>
@@ -519,7 +533,7 @@
                       <img
                         src="./images/ODS4.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 4: Educación de calidad"
                       />
                     </div>
                   </div>
@@ -530,7 +544,7 @@
                       <img
                         src="./images/ODS5.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 5: Igualdad de género"
                       />
                     </div>
                   </div>
@@ -541,7 +555,7 @@
                       <img
                         src="./images/ODS8.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 8: Trabajo decente y crecimiento económico"
                       />
                     </div>
                   </div>
@@ -552,7 +566,7 @@
                       <img
                         src="./images/ODS10.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 10: Reducción de las desigualdades"
                       />
                     </div>
                   </div>
@@ -563,7 +577,7 @@
                       <img
                         src="./images/ODS16.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 16: Paz, justicia e instituciones sólidas"
                       />
                     </div>
                   </div>
@@ -574,7 +588,7 @@
                       <img
                         src="./images/global-goals.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="Objetivos de desarrollo sostenible"
                       />
                     </div>
                   </div>
@@ -648,14 +662,14 @@
                       <img
                         src="./images/ODS1.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 1: Fin de la pobreza"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS3.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 3: Salud y bienestar"
                       />
                     </div>
                   </div>
@@ -666,14 +680,14 @@
                       <img
                         src="./images/ODS4.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 4: Educación de calidad"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS5.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 5: Igualdad de género"
                       />
                     </div>
                   </div>
@@ -684,14 +698,14 @@
                       <img
                         src="./images/ODS8.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 8: Trabajo decente y crecimiento económico"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS10.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 10: Reducción de las desigualdades"
                       />
                     </div>
                   </div>
@@ -702,14 +716,14 @@
                       <img
                         src="./images/ODS16.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 16: Paz, justicia e instituciones sólidas"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/global-goals.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="Objetivos de desarrollo sostenible"
                       />
                     </div>
                   </div>
@@ -769,28 +783,28 @@
                       <img
                         src="./images/ODS1.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 1: Fin de la pobreza"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS3.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 3: Salud y bienestar"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS4.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 4: Educación de calidad"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS5.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 5: Igualdad de género"
                       />
                     </div>
                   </div>
@@ -801,28 +815,28 @@
                       <img
                         src="./images/ODS8.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 8: Trabajo decente y crecimiento económico"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS10.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 10: Reducción de las desigualdades"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/ODS16.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="ODS 16: Paz, justicia e instituciones sólidas"
                       />
                     </div>
                     <div class="imageBox m-4 border border-0">
                       <img
                         src="./images/global-goals.png"
                         class="img-fluid"
-                        alt="..."
+                        alt="Objetivos de desarrollo sostenible"
                       />
                     </div>
                   </div>
@@ -859,30 +873,49 @@
     </main>
     <footer class="bg-primary position-relative">
       <div
-        class="background background--footer background_degradado background_degradado--negro"
+        class="background background--footer background-degradado background-degradado--negro"
       >
         <div class="row myContainer m-0 pb-4 pb-md-0">
           <div class="col-12 col-md-4 z-index-1 py-2 py-md-5 px-0 pe-md-3">
-            <img src="./images/proyecto-magis.svg" alt="" class="img-fluid" />
+            <img
+              src="./images/proyecto-magis.svg"
+              alt="Logo de Magis"
+              class="img-fluid"
+            />
             <h2 class="text-primary fw-bold m-0 fs-2 mt-3 lh-base z-index-1">
               Síguenos
             </h2>
             <div class="d-flex mt-4 gap-3">
-              <div
-                class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+              <a
+                href="https://www.facebook.com/ProyectoMagis/"
+                class="text-decoration-none"
               >
-                <i class="fa-brands fa-facebook-f fs-3 text-dark"></i>
-              </div>
-              <div
-                class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+                <div
+                  class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-facebook-f fs-3 text-dark"></i>
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/proyectomagis/"
+                class="text-decoration-none"
               >
-                <i class="fa-brands fa-square-instagram fs-2 text-dark"></i>
-              </div>
-              <div
-                class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+                <div
+                  class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-square-instagram fs-2 text-dark"></i>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/proyecto-magis/"
+                class="text-decoration-none"
               >
-                <i class="fa-brands fa-linkedin-in fs-3 text-dark"></i>
-              </div>
+                <div
+                  class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-linkedin-in fs-3 text-dark"></i>
+                </div>
+              </a>
             </div>
           </div>
           <div
@@ -905,9 +938,14 @@
             <p class="text-white m-0 fs-5 mt-3 lh-base">
               4 bis y 611, Barrio Aeropuerto (La Plata)
             </p>
-            <p class="text-white m-0 fs-5 mt-3 lh-base">
-              pmagisvoluntarios@gmail.com
-            </p>
+            <a
+              href="mailto:pmagisvoluntarios@gmail.com"
+              class="text-decoration-none"
+            >
+              <p class="text-white m-0 fs-5 mt-3 lh-base">
+                pmagisvoluntarios@gmail.com
+              </p>
+            </a>
           </div>
         </div>
         <div class="bg-dark">
@@ -919,10 +957,12 @@
         </div>
       </div>
     </footer>
+    <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/d305e9edbf.js"
       crossorigin="anonymous"
     ></script>
+    <!-- BOOTSTRAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
