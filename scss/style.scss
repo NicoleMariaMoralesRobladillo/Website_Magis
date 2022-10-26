@@ -42,7 +42,8 @@ $background: (
   "unirse-inicio" url(../images/unirse-inicio.JPG) 37rem,
   "header-conocenos" url(../images/conocenos-header.jpeg) 25rem,
   "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
-  "testimonios-conocenos" url(../images/slider2-1.png) auto
+  "testimonios-conocenos" url(../images/slider2-1.png) auto,
+  "header-programas" url(../images/programas-header.jpeg) 25rem
 );
 $background--ejes-del-proyecto: (
   "educacion": url(../images/eje-educacion.JPG),
@@ -51,7 +52,7 @@ $background--ejes-del-proyecto: (
 $background-degradado: (
   "negro" $dark 0.6 0,
   "primary" $primary 0.8 1rem,
-  "light" $light 0.8 0
+  "light" $light 0.9 0
 );
 
 /*Carousel*/
@@ -242,6 +243,11 @@ html {
 }
 .active {
   background-color: $primary !important;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-color: $primary;
 }
 .imageBox {
   max-width: 20rem;

@@ -161,6 +161,10 @@ html {
   background-image: url(../images/slider2-1.png);
   height: auto;
 }
+.background--header-programas {
+  background-image: url(../images/programas-header.jpeg);
+  height: 25rem;
+}
 .background-degradado:before {
   content: "";
   width: 100%;
@@ -181,7 +185,7 @@ html {
 }
 .background-degradado--light:before {
   background-color: #fbfbfb;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 0;
 }
 
@@ -212,6 +216,11 @@ html {
 
 .active {
   background-color: #f9a032 !important;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-color: #f9a032;
 }
 
 .imageBox {
