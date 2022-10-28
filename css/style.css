@@ -15,7 +15,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 70%;
 }
 
 /*******************************************Z-INDEX*******************************************/
@@ -150,7 +150,7 @@ html {
   height: 37rem;
 }
 .background--header-conocenos {
-  background-image: url(../images/conocenos-header.jpeg);
+  background-image: url(../images/conocenos-header.JPG);
   height: 25rem;
 }
 .background--conocenos-quienes-somos {
@@ -214,13 +214,15 @@ html {
   max-height: 600px;
 }
 
+.button-tab {
+  border: 0;
+}
+
 .active {
   background-color: #f9a032 !important;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-color: #f9a032;
+  border-bottom: #f9a032 !important;
+  border-style: solid !important;
+  border-bottom-width: 0.5rem !important;
 }
 
 .imageBox {
@@ -14595,7 +14597,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
   html {
-    font-size: 70.5%;
+    font-size: 75%;
   }
   .carousel-item--testimonios {
     height: 30rem;
@@ -14636,7 +14638,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 1024px) {
   html {
-    font-size: 75%;
+    font-size: 80%;
   }
 }
 
