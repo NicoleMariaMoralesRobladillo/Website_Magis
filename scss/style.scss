@@ -38,7 +38,7 @@ $dropdown-item-padding-x: $mySize * 2;
 /*Background*/
 $background: (
   "ejes-del-proyecto" url(../images/ejes-fondo.jpeg) auto,
-  "footer" url(../images/footer.jpeg) auto,
+  "footer" url(../images/footer.jpg) auto,
   "unirse-inicio" url(../images/unirse-inicio.JPG) 37rem,
   "header-conocenos" url(../images/conocenos-header.JPG) 25rem,
   "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
@@ -174,6 +174,8 @@ html {
   margin-left: $mySize;
 }
 
+$nav-link-color: $dark;
+
 /*******************************************BACKGROUND*******************************************/
 
 .background {
@@ -218,9 +220,10 @@ html {
 .card {
   transition: all 0.9s;
   backface-visibility: hidden;
-  max-width: 35rem;
+  aspect-ratio: 1/1;
+  width: 100%;
   &-container {
-    min-height: 300px;
+    max-width: 35rem;
     &:hover {
       & .card-front {
         transform: rotateY(180deg);
@@ -248,7 +251,8 @@ html {
   background-color: $primary !important;
   border-bottom: $primary !important;
   border-style: solid !important;
-  border-bottom-width: 0.5rem !important;
+  border-bottom-width: 0.3rem !important;
+  color: $primary !important;
 }
 .imageBox {
   max-width: 20rem;
@@ -410,5 +414,11 @@ $utilities: map-merge(
 @media (min-width: 1024px) {
   html {
     font-size: 80%;
+  }
+}
+@media (min-width: 1175px) {
+  .carousel-caption__text {
+    display: flex;
+    flex-direction: column;
   }
 }

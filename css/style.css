@@ -142,7 +142,7 @@ html {
   background-image: url(../images/eje-familia.jpg);
 }
 .background--footer {
-  background-image: url(../images/footer.jpeg);
+  background-image: url(../images/footer.jpg);
   height: auto;
 }
 .background--unirse-inicio {
@@ -193,10 +193,11 @@ html {
 .card {
   transition: all 0.9s;
   backface-visibility: hidden;
-  max-width: 35rem;
+  aspect-ratio: 1/1;
+  width: 100%;
 }
 .card-container {
-  min-height: 300px;
+  max-width: 35rem;
 }
 .card-container:hover .card-front {
   transform: rotateY(180deg);
@@ -222,7 +223,8 @@ html {
   background-color: #f9a032 !important;
   border-bottom: #f9a032 !important;
   border-style: solid !important;
-  border-bottom-width: 0.5rem !important;
+  border-bottom-width: 0.3rem !important;
+  color: #f9a032 !important;
 }
 
 .imageBox {
@@ -3697,7 +3699,7 @@ textarea.form-control-lg {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-color: #0b1210;
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
   --bs-nav-link-disabled-color: #6c757d;
   display: flex;
@@ -14639,6 +14641,12 @@ textarea.form-control-lg {
 @media (min-width: 1024px) {
   html {
     font-size: 80%;
+  }
+}
+@media (min-width: 1175px) {
+  .carousel-caption__text {
+    display: flex;
+    flex-direction: column;
   }
 }
 
