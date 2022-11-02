@@ -49,6 +49,19 @@ $background--ejes-del-proyecto: (
   "educacion": url(../images/eje-educacion.JPG),
   "familia": url(../images/eje-familia.jpg),
 );
+$background--ejes-del-proyecto--educacion: (
+  "talleres-primaria": url(../images/eje-educacion-talleres-primaria.jpg),
+  "talleres-secundaria": url(../images/eje-educacion-talleres-secundaria.jpg),
+  "educacion-inicial": url(../images/eje-educacion-educacion-inicial.jpg),
+  "paseos-educativos-recreativos":
+    url(../images/eje-educacion-paseos-educativos-recreativos.jpg),
+);
+$background--ejes-del-proyecto--familia: (
+  "encuentros-mamas": url(../images/eje-familia-encuentros-mamas.jpg),
+  "festejo-cumpleanios": url(../images/eje-familia-festejo-cumpleanios.jpg),
+  "jornadas-actividades": url(../images/eje-familia-jornadas-actividades.JPG),
+  "campanias-solidarias": url(../images/eje-familia-campanias-solidarias.jpeg),
+);
 $background-degradado: (
   "negro" $dark 0.6 0,
   "primary" $primary 0.8 1rem,
@@ -58,7 +71,7 @@ $background-degradado: (
 /*Carousel*/
 $carousel-indicator-active-bg: #d9d9d9b0;
 $carousel-indicator-opacity: 1;
-$carousel-indicator-height: 0.3rem;
+$carousel-indicator-height: 0.5rem;
 $carousel-indicator-width: 2rem;
 $carousel-control-opacity: 1;
 $carousel-control-hover-opacity: 1;
@@ -100,7 +113,11 @@ html {
     &-#{$propiety1} {
       @each $position in $direction {
         &-#{$position} {
-          #{$propiety1}-#{$position}: $mySize !important;
+          @if $propiety1== "margin" and $position== "bottom" {
+            margin-bottom: calc($mySize * 2) !important;
+          } @else {
+            #{$propiety1}-#{$position}: $mySize !important;
+          }
         }
       }
     }
@@ -191,6 +208,25 @@ $nav-link-color: $dark;
         {
           &__#{$section-ejes-del-proyecto} {
             background-image: $url-ejes-del-proyecto;
+            @if $section-ejes-del-proyecto == "educacion" {
+              @each $section-ejes-del-proyecto--educacion,
+                $url-ejes-del-proyecto--educacion
+                  in $background--ejes-del-proyecto--educacion
+              {
+                &__#{$section-ejes-del-proyecto--educacion} {
+                  background-image: $url-ejes-del-proyecto--educacion;
+                }
+              }
+            } @else {
+              @each $section-ejes-del-proyecto--familia,
+                $url-ejes-del-proyecto--familia
+                  in $background--ejes-del-proyecto--familia
+              {
+                &__#{$section-ejes-del-proyecto--familia} {
+                  background-image: $url-ejes-del-proyecto--familia;
+                }
+              }
+            }
           }
         }
       }
@@ -221,7 +257,7 @@ $nav-link-color: $dark;
 .flip-card {
   background-color: transparent;
   max-width: 400px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/1.5;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -261,6 +297,7 @@ $nav-link-color: $dark;
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+  overflow: visible;
 }
 
 /*******************************************CAROUSEL*******************************************/
@@ -292,11 +329,16 @@ $nav-link-color: $dark;
 .row--testimonios-voluntarios {
   height: auto;
 }
+.col--testimonios-voluntarios {
+  aspect-ratio: 1 !important;
+}
 .testimonio-voluntario__parrafo {
   overflow-y: scroll;
   scrollbar-color: #484848 #dddddd;
   scrollbar-width: 20px;
   padding-right: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .testimonio-voluntario__parrafo::-webkit-scrollbar {
@@ -361,6 +403,9 @@ $utilities: map-merge(
 @media (min-width: 280px) {
   .carousel-item--testimonios {
     height: 60rem;
+  }
+  .flip-card {
+    aspect-ratio: 1/1;
   }
 }
 @media (min-width: 370px) {
