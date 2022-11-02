@@ -43,7 +43,8 @@ $background: (
   "header-conocenos" url(../images/conocenos-header.JPG) 25rem,
   "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
   "testimonios-conocenos" url(../images/slider2-1.png) auto,
-  "header-programas" url(../images/programas-header.jpeg) 25rem
+  "header-programas" url(../images/programas-header.jpeg) 25rem,
+  "header-contactanos" url(../images/contactanos-header.jpg) 25rem
 );
 $background--ejes-del-proyecto: (
   "educacion": url(../images/eje-educacion.JPG),
@@ -65,7 +66,7 @@ $background--ejes-del-proyecto--familia: (
 $background-degradado: (
   "negro" $dark 0.6 0,
   "primary" $primary 0.8 1rem,
-  "light" $light 0.9 0
+  "light" $light 0.87 0
 );
 
 /*Carousel*/
@@ -80,6 +81,10 @@ $carousel-control-prev-icon-bg: url("../images/carousel-control-prev-icon-bg.svg
 $carousel-control-next-icon-bg: url("../images/carousel-control-next-icon-bg.svg");
 $carousel-dark-indicator-active-bg: #d9d9d9b0;
 $carousel-dark-control-icon-filter: invert(0.25) grayscale(10);
+
+/*Accordion*/
+$accordion-button-icon: url("../images/pregunta-cerrada.svg");
+$accordion-button-active-icon: url("../images/pregunta-abierta.svg");
 
 /*******************************************TEXTO*******************************************/
 
@@ -455,8 +460,8 @@ $utilities: map-merge(
   .my-margin {
     @each $position in $direction {
       &-#{$position} {
-        @if $position == "bottom" {
-          margin-bottom: calc($mySize * 2) !important;
+        @if $position == "bottom" or $position == "top" {
+          margin-#{$position}: calc($mySize * 2) !important;
         } @else {
           margin-#{$position}: $mySize2 !important;
         }
