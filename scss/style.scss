@@ -40,11 +40,11 @@ $background: (
   "ejes-del-proyecto" url(../images/ejes-fondo.jpeg) auto,
   "footer" url(../images/footer.jpg) auto,
   "unirse-inicio" url(../images/unirse-inicio.JPG) 37rem,
-  "header-conocenos" url(../images/conocenos-header.JPG) 25rem,
+  "header-conocenos" url(../images/conocenos-header.JPG) 33rem,
   "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
   "testimonios-conocenos" url(../images/slider2-1.png) auto,
-  "header-programas" url(../images/programas-header.jpeg) 25rem,
-  "header-contactanos" url(../images/contactanos-header.jpg) 25rem
+  "header-programas" url(../images/programas-header.jpeg) 33rem,
+  "header-contactanos" url(../images/contactanos-header.jpg) 33rem
 );
 $background--ejes-del-proyecto: (
   "educacion": url(../images/eje-educacion.JPG),
@@ -262,7 +262,7 @@ $nav-link-color: $dark;
 .flip-card {
   background-color: transparent;
   max-width: 400px;
-  aspect-ratio: 1/1.5;
+  aspect-ratio: 1/1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -303,6 +303,14 @@ $nav-link-color: $dark;
   color: white;
   transform: rotateY(180deg);
   overflow: visible;
+}
+
+.flip-card__content {
+  overflow-y: auto;
+  scrollbar-color: #484848 #dddddd;
+  scrollbar-width: 20px;
+  padding: 0 1rem;
+  margin: auto 0;
 }
 
 /*******************************************CAROUSEL*******************************************/
@@ -408,9 +416,6 @@ $utilities: map-merge(
 @media (min-width: 280px) {
   .carousel-item--testimonios {
     height: 60rem;
-  }
-  .flip-card {
-    aspect-ratio: 1/1;
   }
 }
 @media (min-width: 370px) {

@@ -71,13 +71,17 @@
               </li>
               <li class="nav-item-selected dropdown p-0 border-bottom border-1">
                 <a
-                  class="nav-link text-primary text-navbar px-0 p-lg-0 fw-semibold fs-5 lh-lg ms-lg-0"
+                  class="nav-link text-secondary text-navbar px-0 p-lg-0 fw-normal_plus fs-5 lh-lg ms-lg-0 d-inline-block"
                   href="./programas.html"
-                  role="button"
+                >
+                  Programas
+                </a>
+                <button
+                  class="btn btn-link text-secondary text-navbar p-0 m-0 d-inline-block"
+                  type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Programas
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -91,27 +95,27 @@
                       d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                     />
                   </svg>
-                </a>
+                </button>
                 <ul class="dropdown-menu border border-0 p-0 bg-light">
                   <li class="border-bottom border-top border-1">
                     <a
                       class="dropdown-item py-2 px-lg-3 fw-normal fs-5 lh-lg"
-                      href="./programas.html"
+                      href="./programas.html#carrousel-ejes-programas"
                       >Nuestros ejes</a
                     >
                   </li>
                   <li class="border-bottom border-1">
                     <a
                       class="dropdown-item py-2 px-lg-3 fw-normal fs-5 lh-lg"
-                      href="./programas.html"
+                      href="./programas.html#actividades-programas"
                       >Nuestras actividades</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item py-2 px-lg-3 fw-normal fs-5 lh-lg"
-                      href="./programas.html"
-                      >FAQ</a
+                      href="./programas.html#preguntas-programas"
+                      >Preguntas frecuentes</a
                     >
                   </li>
                 </ul>
@@ -145,43 +149,41 @@
       </section>
       <!-- Carrousel de ejes -->
       <section id="carrousel-ejes-programas" class="my-margin-bottom">
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slides"
-          data-bs-ride="true"
-        >
-          <div class="carousel-indicators pb-0 mb-0">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active border-0"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              class="border-0"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-          </div>
-          <div class="carousel-inner carousel-1">
-            <div
-              class="carousel-item border-0 carousel-item-1 active h-100 px-0 w-100 bg-white"
-            >
-              <div class="d-flex flex-column gap-3 myContainer">
-                <h2
-                  class="fw-semibold fs-5 lh-base text-primary p-0 m-0 z-index-1 text-center"
-                >
-                  ¿Qué hacemos?
-                </h2>
-                <h3
-                  class="fw-bold fs-2 lh-base m-0 z-index-1 text-dark text-center"
-                >
-                  Nuestros ejes
-                </h3>
+        <div class="d-flex flex-column gap-3 myContainer">
+          <h2
+            class="fw-semibold fs-4 lh-base text-primary p-0 m-0 z-index-1 text-center"
+          >
+            ¿Qué hacemos?
+          </h2>
+          <h3 class="fw-bold fs-2 lh-base m-0 z-index-1 text-dark text-center">
+            Nuestros ejes
+          </h3>
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slides"
+            data-bs-ride="true"
+          >
+            <div class="carousel-indicators pb-0 mb-0">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active border-0"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                class="border-0"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+            <div class="carousel-inner carousel-1">
+              <div
+                class="carousel-item border-0 carousel-item-1 active h-100 px-0 w-100 bg-white"
+              >
                 <div class="row pb-5">
                   <div
                     class="col-12 col-md-6 my-padding-bottom pb-md-0 padding-right-25 z-index-1"
@@ -213,21 +215,9 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              class="carousel-item border-0 carousel-item-1 h-100 px-0 w-100 bg-white"
-            >
-              <div class="d-flex flex-column gap-3 myContainer">
-                <h2
-                  class="fw-semibold fs-5 lh-base text-primary p-0 m-0 z-index-1 text-center"
-                >
-                  ¿Qué hacemos?
-                </h2>
-                <h3
-                  class="fw-bold fs-2 lh-base m-0 z-index-1 text-dark text-center"
-                >
-                  Nuestros ejes
-                </h3>
+              <div
+                class="carousel-item border-0 carousel-item-1 h-100 px-0 w-100 bg-white"
+              >
                 <div class="row pb-5">
                   <div
                     class="col-12 col-md-6 my-padding-bottom pb-md-0 padding-right-25 z-index-1"
@@ -268,7 +258,7 @@
       <section id="actividades-programas" class="my-margin-bottom">
         <div class="d-flex flex-column gap-3 w-100 m-0 p-0">
           <h2
-            class="fw-semibold fs-5 lh-base text-primary m-0 z-index-1 text-center"
+            class="fw-semibold fs-4 lh-base text-primary m-0 z-index-1 text-center"
           >
             ¿Cómo lo hacemos?
           </h2>
@@ -963,11 +953,11 @@
           <div
             class="background background--ejes-del-proyecto background-degradado background-degradado--light d-flex flex-column gap-3 px-0 overflow-hidden w-100 py-lg-5 my-padding-top my-padding-bottom m-0"
           >
-            <h2 class="fw-semibold fs-5 lh-base text-primary p-0 z-index-1 m-0">
-              Programas
+            <h2 class="fw-semibold fs-4 lh-base text-primary p-0 z-index-1 m-0">
+              ¿Tenés dudas?
             </h2>
             <h3 class="fw-bold fs-2 lh-base m-0 px-0 z-index-1 pb-2 pt-0">
-              Ejes del proyecto
+              Preguntas frecuentes
             </h3>
             <div
               class="accordion myContainer"

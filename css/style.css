@@ -176,7 +176,7 @@ html {
 }
 .background--header-conocenos {
   background-image: url(../images/conocenos-header.JPG);
-  height: 25rem;
+  height: 33rem;
 }
 .background--conocenos-quienes-somos {
   background-image: url(../images/conocenos-quienes-somos.jpg);
@@ -188,11 +188,11 @@ html {
 }
 .background--header-programas {
   background-image: url(../images/programas-header.jpeg);
-  height: 25rem;
+  height: 33rem;
 }
 .background--header-contactanos {
   background-image: url(../images/contactanos-header.jpg);
-  height: 25rem;
+  height: 33rem;
 }
 .background-degradado:before {
   content: "";
@@ -223,7 +223,7 @@ html {
 .flip-card {
   background-color: transparent;
   max-width: 400px;
-  aspect-ratio: 1/1.5;
+  aspect-ratio: 1/1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -264,6 +264,14 @@ html {
   color: white;
   transform: rotateY(180deg);
   overflow: visible;
+}
+
+.flip-card__content {
+  overflow-y: auto;
+  scrollbar-color: #484848 #dddddd;
+  scrollbar-width: 20px;
+  padding: 0 1rem;
+  margin: auto 0;
 }
 
 /*******************************************CAROUSEL*******************************************/
@@ -14620,9 +14628,6 @@ textarea.form-control-lg {
 @media (min-width: 280px) {
   .carousel-item--testimonios {
     height: 60rem;
-  }
-  .flip-card {
-    aspect-ratio: 1/1;
   }
 }
 @media (min-width: 370px) {
