@@ -277,9 +277,6 @@ $nav-link-color: $dark;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
 
 /* Position the front and back side */
 .flip-card-front,
@@ -372,6 +369,13 @@ $nav-link-color: $dark;
 .col--testimonios-voluntarios {
   height: 400px;
 }
+.frame__form {
+  height: 470px;
+}
+.frame__map {
+  min-height: 470px;
+}
+
 /*******************************************FOOTER*******************************************/
 
 .icon {
@@ -450,6 +454,9 @@ $utilities: map-merge(
         }
       }
     }
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
   }
   .myContainer {
     padding-right: $mySize2;
