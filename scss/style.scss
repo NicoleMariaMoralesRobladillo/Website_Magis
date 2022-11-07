@@ -43,8 +43,8 @@ $background: (
   "header-conocenos" url(../images/conocenos-header.JPG) 33rem,
   "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
   "testimonios-conocenos" url(../images/slider2-1.png) auto,
-  "header-programas" url(../images/programas-header.jpeg) 33rem,
-  "header-contactanos" url(../images/contactanos-header.jpg) 33rem
+  "header-programas" url(../images/programas-header.jpg) 33rem,
+  "header-contactanos" url(../images/contactanos-header.jpeg) 33rem
 );
 $background--ejes-del-proyecto: (
   "educacion": url(../images/eje-educacion.JPG),
@@ -64,7 +64,7 @@ $background--ejes-del-proyecto--familia: (
   "campanias-solidarias": url(../images/eje-familia-campanias-solidarias.jpeg),
 );
 $background-degradado: (
-  "negro" $dark 0.6 0,
+  "negro" $dark 0.65 0,
   "primary" $primary 0.8 1rem,
   "light" $light 0.87 0
 );
@@ -306,11 +306,41 @@ $nav-link-color: $dark;
 }
 
 .flip-card__content {
-  overflow-y: auto;
-  scrollbar-color: #484848 #dddddd;
-  scrollbar-width: 20px;
-  padding: 0 1rem;
   margin: auto 0;
+}
+
+.scroll {
+  scrollbar-width: 20px;
+}
+
+.scroll--auto {
+  overflow-y: auto;
+  padding: 0 1rem;
+}
+
+.scroll--always {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding-right: 1rem;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: #dddddd;
+  border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #484848;
+  border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #484848;
 }
 
 /*******************************************CAROUSEL*******************************************/
@@ -333,45 +363,15 @@ $nav-link-color: $dark;
   max-width: 20rem;
 }
 .foto-testimonio {
-  width: 7rem;
-  height: 7rem;
-}
-.carousel-item--testimonios {
-  height: 50rem;
+  width: 10.2rem;
+  height: 10.2rem;
 }
 .row--testimonios-voluntarios {
   height: auto;
 }
 .col--testimonios-voluntarios {
-  aspect-ratio: 1 !important;
+  height: 400px;
 }
-.testimonio-voluntario__parrafo {
-  overflow-y: scroll;
-  scrollbar-color: #484848 #dddddd;
-  scrollbar-width: 20px;
-  padding-right: 1rem;
-  width: 100%;
-  height: 100%;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar {
-  width: 10px;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar-track {
-  background-color: #dddddd;
-  border-radius: 20px;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar-thumb {
-  background-color: #484848;
-  border-radius: 20px;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar-thumb:hover {
-  background-color: #484848;
-}
-
 /*******************************************FOOTER*******************************************/
 
 .icon {
@@ -403,32 +403,9 @@ $utilities: map-merge(
 @import "../node_modules/bootstrap/scss/utilities/api.scss";
 
 /*******************************************MEDIA QUERYS********************************************/
-@media (min-width: 230px) {
-  .carousel-item--testimonios {
-    height: 90rem;
-  }
-}
-@media (min-width: 260px) {
-  .carousel-item--testimonios {
-    height: 70rem;
-  }
-}
-@media (min-width: 280px) {
-  .carousel-item--testimonios {
-    height: 60rem;
-  }
-}
-@media (min-width: 370px) {
-  .carousel-item--testimonios {
-    height: 45rem;
-  }
-}
 @media (min-width: 500px) {
   .big-text {
     font-size: 2.5rem !important;
-  }
-  .carousel-item--testimonios {
-    height: 35rem;
   }
 }
 @media (min-width: 600px) {
@@ -450,13 +427,14 @@ $utilities: map-merge(
       }
     }
   }
+  .row--testimonios-voluntarios .col--testimonios-voluntarios {
+    height: auto;
+    aspect-ratio: 2.5 !important;
+  }
 }
 @include media-breakpoint-up(lg) {
   html {
     font-size: 75%;
-  }
-  .carousel-item--testimonios {
-    height: 30rem;
   }
   #navbarNavDropdown {
     background-color: $dark;

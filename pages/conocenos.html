@@ -11,7 +11,7 @@
     <!-- LOGO -->
     <link rel="shortcut icon" href="../images/logo-icon.svg" />
   </head>
-  <body>
+  <body class="scroll scroll--auto p-0">
     <header class="position-sticky top-0 left-0 bg-dark z-index-3">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div id="navbarNav" class="container-fluid p-0">
@@ -194,7 +194,7 @@
       <section id="carrousel-testimonios-conocenos" class="my-margin-bottom">
         <div
           id="carouselExampleIndicators"
-          class="carousel slide"
+          class="carousel slide same-height"
           data-bs-ride="true"
         >
           <div class="carousel-indicators pb-2">
@@ -224,10 +224,10 @@
           <div class="carousel-inner">
             <div
               id="testimonio-juancito"
-              class="carousel-item active border-0 background background--testimonios-conocenos h-100"
+              class="carousel-item active border-0 background background--testimonios-conocenos"
             >
               <div
-                class="d-flex justify-content-center align-items-center flex-column gap-3 py-5 my-5 px-5 mx-5 carousel-item--testimonios"
+                class="d-flex justify-content-center align-items-center flex-column gap-3 py-5 my-5 px-5 mx-5"
               >
                 <h2
                   class="fw-semibold fs-4 lh-base text-primary p-0 m-0 z-index-1 text-center"
@@ -264,10 +264,10 @@
             </div>
             <div
               id="testimonio-ana"
-              class="carousel-item border-0 background background--testimonios-conocenos h-100 carousel-item--testimonios"
+              class="carousel-item border-0 background background--testimonios-conocenos"
             >
               <div
-                class="d-flex justify-content-center align-items-center flex-column gap-3 py-5 my-5 px-5 mx-5 carousel-item--testimonios"
+                class="d-flex justify-content-center align-items-center flex-column gap-3 py-5 my-5 px-5 mx-5"
               >
                 <h2
                   class="fw-semibold fs-4 lh-base text-primary p-0 m-0 z-index-1 text-center"
@@ -303,10 +303,10 @@
             </div>
             <div
               id="testimonio-sofi"
-              class="carousel-item border-0 background background--testimonios-conocenos h-100 carousel-item--testimonios"
+              class="carousel-item border-0 background background--testimonios-conocenos"
             >
               <div
-                class="d-flex justify-content-center align-items-center flex-column gap-3 py-5 my-5 px-5 mx-5 carousel-item--testimonios text-center"
+                class="d-flex justify-content-center align-items-center flex-column gap-3 py-5 my-5 px-5 mx-5 text-center"
               >
                 <h2
                   class="fw-semibold fs-4 lh-base text-primary p-0 m-0 z-index-1 text-center"
@@ -428,7 +428,7 @@
                       class="fw-semibold fs-4 lh-base text-dark p-0 m-0 z-index-1 text-start"
                       >El amor que siempre busca más</span
                     >
-                    <div class="testimonio-voluntario__parrafo">
+                    <div class="scroll scroll--always">
                       <p
                         class="fs-5 lh-base m-0 text-dark text-start d-flex flex-column gap-3"
                       >
@@ -528,7 +528,7 @@
                       >Nombres, caras y sonrisas: El paso para dejar de ser
                       indiferentes</span
                     >
-                    <div class="testimonio-voluntario__parrafo">
+                    <div class="scroll scroll--always">
                       <p
                         class="fs-5 lh-base m-0 text-dark text-start d-flex flex-column gap-3"
                       >
@@ -592,7 +592,7 @@
                       class="fw-semibold fs-4 lh-base text-dark p-0 m-0 z-index-1 text-start"
                       >Perseverar en el amor para acompañar hasta el final</span
                     >
-                    <div class="testimonio-voluntario__parrafo">
+                    <div class="scroll scroll--always">
                       <p
                         class="fs-5 lh-base m-0 text-dark text-start d-flex flex-column gap-3"
                       >
@@ -658,26 +658,16 @@
         class="background background--footer background-degradado background-degradado--negro"
       >
         <div class="row myContainer m-0 pb-4 pb-md-0">
-          <div class="col-12 col-md-4 z-index-1 py-2 py-md-5 px-0 pe-md-3">
+          <div class="col-12 col-md-4 z-index-1 py-4 py-md-5 px-0 pe-md-3">
             <img
               src="../images/proyecto-magis.svg"
               alt="Logo de Magis"
               class="img-fluid"
             />
             <h2 class="text-primary fw-bold m-0 fs-2 mt-3 lh-base z-index-1">
-              Síguenos
+              Seguinos
             </h2>
-            <div class="d-flex mt-4 gap-3">
-              <a
-                href="https://www.facebook.com/ProyectoMagis/"
-                class="text-decoration-none"
-              >
-                <div
-                  class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
-                >
-                  <i class="fa-brands fa-facebook-f fs-3 text-dark"></i>
-                </div>
-              </a>
+            <div class="d-flex mt-4 gap-3 flex-wrap">
               <a
                 href="https://www.instagram.com/proyectomagis/"
                 class="text-decoration-none"
@@ -686,6 +676,16 @@
                   class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
                 >
                   <i class="fa-brands fa-square-instagram fs-2 text-dark"></i>
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/ProyectoMagis/"
+                class="text-decoration-none"
+              >
+                <div
+                  class="bg-white rounded-circle icon d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-facebook-f fs-3 text-dark"></i>
                 </div>
               </a>
               <a
@@ -701,7 +701,7 @@
             </div>
           </div>
           <div
-            class="col-12 col-md-4 d-flex flex-column z-index-1 py-2 py-md-5 px-0 px-md-3"
+            class="col-12 col-md-4 d-flex flex-column z-index-1 py-4 py-md-5 px-0 px-md-3"
           >
             <h2 class="text-primary fw-bold m-0 fs-2 lh-base z-index-1">
               Conocenos
@@ -717,7 +717,7 @@
               >Quiero ser voluntario</a
             >
           </div>
-          <div class="col-12 col-md-4 z-index-1 py-2 py-md-5 px-0 ps-md-3">
+          <div class="col-12 col-md-4 z-index-1 py-4 py-md-5 px-0 ps-md-3">
             <h2 class="text-primary fw-bold m-0 fs-2 lh-base z-index-1">
               Contactanos
             </h2>
@@ -728,13 +728,13 @@
               href="mailto:pmagisvoluntarios@gmail.com"
               class="text-decoration-none"
             >
-              <p class="text-white m-0 fs-5 mt-3 lh-base">
+              <p class="text-white m-0 fs-5 mt-3 lh-base text-break">
                 pmagisvoluntarios@gmail.com
               </p>
             </a>
           </div>
         </div>
-        <div class="bg-dark">
+        <div class="bg-transparent">
           <div
             class="text-white myContainer py-4 text-center fs-5 lh-base position-relative"
           >

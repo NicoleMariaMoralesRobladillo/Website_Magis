@@ -187,11 +187,11 @@ html {
   height: auto;
 }
 .background--header-programas {
-  background-image: url(../images/programas-header.jpeg);
+  background-image: url(../images/programas-header.jpg);
   height: 33rem;
 }
 .background--header-contactanos {
-  background-image: url(../images/contactanos-header.jpg);
+  background-image: url(../images/contactanos-header.jpeg);
   height: 33rem;
 }
 .background-degradado:before {
@@ -204,7 +204,7 @@ html {
 }
 .background-degradado--negro:before {
   background-color: #0b1210;
-  opacity: 0.6;
+  opacity: 0.65;
   border-radius: 0;
 }
 .background-degradado--primary:before {
@@ -267,11 +267,41 @@ html {
 }
 
 .flip-card__content {
-  overflow-y: auto;
-  scrollbar-color: #484848 #dddddd;
-  scrollbar-width: 20px;
-  padding: 0 1rem;
   margin: auto 0;
+}
+
+.scroll {
+  scrollbar-width: 20px;
+}
+
+.scroll--auto {
+  overflow-y: auto;
+  padding: 0 1rem;
+}
+
+.scroll--always {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding-right: 1rem;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: #dddddd;
+  border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #484848;
+  border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #484848;
 }
 
 /*******************************************CAROUSEL*******************************************/
@@ -297,12 +327,8 @@ html {
 }
 
 .foto-testimonio {
-  width: 7rem;
-  height: 7rem;
-}
-
-.carousel-item--testimonios {
-  height: 50rem;
+  width: 10.2rem;
+  height: 10.2rem;
 }
 
 .row--testimonios-voluntarios {
@@ -310,34 +336,7 @@ html {
 }
 
 .col--testimonios-voluntarios {
-  aspect-ratio: 1 !important;
-}
-
-.testimonio-voluntario__parrafo {
-  overflow-y: scroll;
-  scrollbar-color: #484848 #dddddd;
-  scrollbar-width: 20px;
-  padding-right: 1rem;
-  width: 100%;
-  height: 100%;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar {
-  width: 10px;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar-track {
-  background-color: #dddddd;
-  border-radius: 20px;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar-thumb {
-  background-color: #484848;
-  border-radius: 20px;
-}
-
-.testimonio-voluntario__parrafo::-webkit-scrollbar-thumb:hover {
-  background-color: #484848;
+  height: 400px;
 }
 
 /*******************************************FOOTER*******************************************/
@@ -14615,32 +14614,9 @@ textarea.form-control-lg {
   }
 }
 /*******************************************MEDIA QUERYS********************************************/
-@media (min-width: 230px) {
-  .carousel-item--testimonios {
-    height: 90rem;
-  }
-}
-@media (min-width: 260px) {
-  .carousel-item--testimonios {
-    height: 70rem;
-  }
-}
-@media (min-width: 280px) {
-  .carousel-item--testimonios {
-    height: 60rem;
-  }
-}
-@media (min-width: 370px) {
-  .carousel-item--testimonios {
-    height: 45rem;
-  }
-}
 @media (min-width: 500px) {
   .big-text {
     font-size: 2.5rem !important;
-  }
-  .carousel-item--testimonios {
-    height: 35rem;
   }
 }
 @media (min-width: 600px) {
@@ -14667,13 +14643,14 @@ textarea.form-control-lg {
   .padding-bottom-25 {
     padding-bottom: 1.25rem !important;
   }
+  .row--testimonios-voluntarios .col--testimonios-voluntarios {
+    height: auto;
+    aspect-ratio: 2.5 !important;
+  }
 }
 @media (min-width: 992px) {
   html {
     font-size: 75%;
-  }
-  .carousel-item--testimonios {
-    height: 30rem;
   }
   #navbarNavDropdown {
     background-color: #0b1210;
