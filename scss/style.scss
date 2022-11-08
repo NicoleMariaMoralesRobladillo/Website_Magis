@@ -86,13 +86,15 @@ $carousel-dark-control-icon-filter: invert(0.25) grayscale(10);
 $accordion-button-icon: url("../images/pregunta-cerrada.svg");
 $accordion-button-active-icon: url("../images/pregunta-abierta.svg");
 
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.5);
+
 /*******************************************TEXTO*******************************************/
 
 * {
   font-family: "Poppins", sans-serif;
 }
 html {
-  font-size: 70%;
+  font-size: 74%;
 }
 
 /*******************************************Z-INDEX*******************************************/
@@ -383,6 +385,10 @@ $nav-link-color: $dark;
   height: 35px;
 }
 
+.red-social-icon {
+  width: 1.65rem;
+}
+
 /*******************************************API********************************************/
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -438,7 +444,7 @@ $utilities: map-merge(
 }
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 75%;
+    font-size: 77%;
   }
   #navbarNavDropdown {
     background-color: $dark;
