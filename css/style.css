@@ -247,6 +247,7 @@ html {
 
 .scroll {
   scrollbar-width: 20px;
+  -webkit-overflow-scrolling: touch;
 }
 .scroll--auto {
   overflow-y: auto;
