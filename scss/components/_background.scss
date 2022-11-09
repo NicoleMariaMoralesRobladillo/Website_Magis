@@ -1,0 +1,55 @@
+.background {
+  background-size: cover;
+  background-position: center;
+  @each $section, $url, $height in $background {
+    &--#{$section} {
+      background-image: $url;
+      height: $height;
+      @if $section == "ejes-del-proyecto" {
+        @each $section-ejes-del-proyecto,
+          $url-ejes-del-proyecto in $background--ejes-del-proyecto
+        {
+          &__#{$section-ejes-del-proyecto} {
+            background-image: $url-ejes-del-proyecto;
+            @if $section-ejes-del-proyecto == "educacion" {
+              @each $section-ejes-del-proyecto--educacion,
+                $url-ejes-del-proyecto--educacion
+                  in $background--ejes-del-proyecto--educacion
+              {
+                &__#{$section-ejes-del-proyecto--educacion} {
+                  background-image: $url-ejes-del-proyecto--educacion;
+                }
+              }
+            } @else {
+              @each $section-ejes-del-proyecto--familia,
+                $url-ejes-del-proyecto--familia
+                  in $background--ejes-del-proyecto--familia
+              {
+                &__#{$section-ejes-del-proyecto--familia} {
+                  background-image: $url-ejes-del-proyecto--familia;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-degradado {
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    @each $name, $color, $opacity, $border-radius in $background-degradado {
+      &--#{$name}:before {
+        background-color: $color;
+        opacity: $opacity;
+        border-radius: $border-radius;
+      }
+    }
+  }
+}

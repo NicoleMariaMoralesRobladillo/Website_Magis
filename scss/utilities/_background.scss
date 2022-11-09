@@ -1,0 +1,33 @@
+$background: (
+  "ejes-del-proyecto" url(../images/ejes-fondo.jpeg) auto,
+  "footer" url(../images/footer.jpg) auto,
+  "unirse-inicio" url(../images/unirse-inicio.JPG) 37rem,
+  "header-conocenos" url(../images/conocenos-header.jfif) 33rem,
+  "conocenos-quienes-somos" url(../images/conocenos-quienes-somos.jpg) 50rem,
+  "testimonios-conocenos" url(../images/slider2-1.png) auto,
+  "header-programas" url(../images/programas-header.jpg) 33rem,
+  "header-contactanos" url(../images/contactanos-header.jpeg) 33rem
+);
+$background--ejes-del-proyecto: (
+  "educacion": url(../images/eje-educacion.JPG),
+  "familia": url(../images/eje-familia.jpg),
+);
+$background--ejes-del-proyecto--educacion: (
+  "talleres-primaria": url(../images/eje-educacion-talleres-primaria.jpg),
+  "talleres-secundaria": url(../images/eje-educacion-talleres-secundaria.jpg),
+  "educacion-inicial": url(../images/eje-educacion-educacion-inicial.jpg),
+  "paseos-educativos-recreativos":
+    url(../images/eje-educacion-paseos-educativos-recreativos.jpg),
+);
+$background--ejes-del-proyecto--familia: (
+  "encuentros-mamas": url(../images/eje-familia-encuentros-mamas.jpg),
+  "festejo-cumpleanios": url(../images/eje-familia-festejo-cumpleanios.jpg),
+  "jornadas-actividades": url(../images/eje-familia-jornadas-actividades.JPG),
+  "campanias-solidarias": url(../images/eje-familia-campanias-solidarias.jpeg),
+);
+$background-degradado: (
+  "negro" $dark 0.65 0,
+  "negro-darker" $dark 0.75 0,
+  "primary" $primary 0.8 1rem,
+  "light" $light 0.87 0
+);

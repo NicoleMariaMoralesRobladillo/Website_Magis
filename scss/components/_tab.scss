@@ -1,0 +1,10 @@
+.button-tab {
+  border: 0;
+}
+.active {
+  background-color: $primary !important;
+  border-bottom: $primary !important;
+  border-style: solid !important;
+  border-bottom-width: 0.3rem !important;
+  color: $primary !important;
+}

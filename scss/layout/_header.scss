@@ -1,0 +1,64 @@
+/*Nav Toggler*/
+.navbar-toggler {
+  width: 35px;
+  height: 31px;
+  transition: 0.5s ease-in-out;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  &__icon {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background-color: $primary;
+    border-radius: 50px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    &--top-bar {
+      margin-top: 0px;
+      transform: rotate(135deg);
+    }
+    &--middle-bar {
+      opacity: 0;
+      margin-top: 0px;
+      filter: alpha(opacity=0);
+    }
+    &--bottom-bar {
+      margin-top: 0px;
+      transform: rotate(-135deg);
+    }
+  }
+  &.collapsed {
+    .navbar-toggler__icon--top-bar {
+      margin-top: -25px;
+      transform: rotate(0deg);
+    }
+    .navbar-toggler__icon--middle-bar {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+    .navbar-toggler__icon--bottom-bar {
+      margin-top: 25px;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+/*Nav*/
+.nav {
+  &-item {
+    border-color: #d6d6d6;
+  }
+  &-link {
+    margin-left: $mySize;
+  }
+}
+
+/*Nav Dropdown*/
+#navbarNavDropdown {
+  background-color: $light;
+  margin-right: 0;
+}

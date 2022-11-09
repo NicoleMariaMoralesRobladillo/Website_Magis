@@ -1,7 +1,7 @@
 {
   "name": "website_magis",
   "version": "1.0.0",
-  "description": "",
+  "description": "Grupo de jóvenes universitarios y profesionales que damos nuestro tiempo en servicio de los más necesitados. Nos ubicamos en Barrio Aeropuerto, La Plata, Argentina.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/NicoleMariaMoralesRobladillo/Website_Magis.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "magis",
+    "argentina",
+    "voluntario",
+    "educación",
+    "familia",
+    "acompañamiento",
+    "voluntariado",
+    "niños",
+    "jóvenes"
+  ],
+  "author": "Proyecto Magis, Marilyn Bravo y Nicole Morales",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NicoleMariaMoralesRobladillo/Website_Magis/issues"

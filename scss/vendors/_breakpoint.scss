@@ -1,0 +1,87 @@
+@media (min-width: 500px) {
+  .big-text {
+    font-size: 2.5rem !important;
+  }
+}
+@media (min-width: 600px) {
+  .big-text {
+    font-size: 3rem !important;
+  }
+}
+@include media-breakpoint-up(md) {
+  .big-text {
+    font-size: 4rem !important;
+    &-2 {
+      font-size: 3rem !important;
+    }
+  }
+  .padding {
+    @each $position in $direction {
+      &-#{$position}-25 {
+        padding-#{$position}: calc($mySize/2) !important;
+      }
+    }
+  }
+  .row--testimonios-voluntarios .col--testimonios-voluntarios {
+    height: auto;
+    aspect-ratio: 2.5 !important;
+  }
+}
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 77%;
+  }
+  #navbarNavDropdown {
+    background-color: $dark;
+    margin-right: $mySize2;
+  }
+  .my-margin {
+    @each $position in $direction {
+      &-#{$position} {
+        @if $position == "bottom" or $position == "top" {
+          margin-#{$position}: calc($mySize * 2) !important;
+        } @else {
+          margin-#{$position}: $mySize2 !important;
+        }
+      }
+    }
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .myContainer {
+    padding-right: $mySize2;
+    padding-left: $mySize2;
+  }
+  .text-navbar {
+    color: white !important;
+  }
+  .nav-item {
+    border: 0 !important;
+    &-selected {
+      border-color: $primary !important;
+      border-width: 0.2rem !important;
+    }
+  }
+  .imageBox {
+    max-width: 15rem;
+  }
+  .padding {
+    @each $position in $direction {
+      &-#{$position}-50 {
+        padding-#{$position}: $mySize !important;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 1175px) {
+  .carousel-caption__text {
+    display: flex;
+    flex-direction: column;
+  }
+}

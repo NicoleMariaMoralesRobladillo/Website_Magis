@@ -1,0 +1,7 @@
+.z-index {
+  @each $value in $z-index {
+    &-#{$value} {
+      z-index: $value !important;
+    }
+  }
+}

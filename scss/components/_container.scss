@@ -1,0 +1,19 @@
+.myContainer {
+  padding-right: $mySize;
+  padding-left: $mySize;
+}
+.my {
+  @each $propiety1 in $propiety {
+    &-#{$propiety1} {
+      @each $position in $direction {
+        &-#{$position} {
+          @if $propiety1== "margin" and $position== "bottom" {
+            margin-bottom: calc($mySize * 2) !important;
+          } @else {
+            #{$propiety1}-#{$position}: $mySize !important;
+          }
+        }
+      }
+    }
+  }
+}
