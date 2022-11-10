@@ -205,7 +205,7 @@ html {
 }
 @supports not (aspect-ratio: 1/1) {
   .flip-card {
-    height: fit-content;
+    height: 400px;
   }
 }
 .flip-card-inner {
@@ -220,19 +220,6 @@ html {
   transition: transform 0.8s, -webkit-transform 0.8s;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  aspect-ratio: 1/1;
-}
-@supports not (aspect-ratio: 1/1) {
-  .flip-card-inner::before {
-    float: left;
-    padding-top: 100%;
-    content: "";
-  }
-  .flip-card-inner::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
 }
 .flip-card-face {
   position: absolute;
