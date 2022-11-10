@@ -203,6 +203,18 @@ html {
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
+@supports not (aspect-ratio: 1/1) {
+  .flip-card::before {
+    float: left;
+    padding-top: 100%;
+    content: "";
+  }
+  .flip-card::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
 .flip-card-inner {
   position: relative;
   width: 100%;
