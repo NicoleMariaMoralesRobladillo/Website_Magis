@@ -5,16 +5,7 @@
   -webkit-perspective: 1000px;
   perspective: 1000px;
   @supports not (aspect-ratio: 1/1) {
-    &::before {
-      float: left;
-      padding-top: 100%;
-      content: "";
-    }
-    &::after {
-      display: block;
-      content: "";
-      clear: both;
-    }
+    height: fit-content;
   }
   &-inner {
     position: relative;
@@ -28,6 +19,19 @@
     transition: transform 0.8s, -webkit-transform 0.8s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    aspect-ratio: 1/1;
+    @supports not (aspect-ratio: 1/1) {
+      &::before {
+        float: left;
+        padding-top: 100%;
+        content: "";
+      }
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+    }
   }
   &-face {
     position: absolute;
