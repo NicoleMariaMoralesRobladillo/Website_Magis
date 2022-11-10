@@ -2,8 +2,11 @@
 .navbar-toggler {
   width: 35px;
   height: 31px;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   outline: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
   &__icon {
@@ -11,14 +14,20 @@
     position: absolute;
     height: 5px;
     width: 100%;
-    background-color: $primary;
+    background-color: #f9a032;
     border-radius: 50px;
     opacity: 1;
     left: 0;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
     &--top-bar {
       margin-top: 0px;
+      -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
       transform: rotate(135deg);
     }
     &--middle-bar {
@@ -28,12 +37,16 @@
     }
     &--bottom-bar {
       margin-top: 0px;
+      -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
       transform: rotate(-135deg);
     }
   }
   &.collapsed {
     .navbar-toggler__icon--top-bar {
       margin-top: -25px;
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
       transform: rotate(0deg);
     }
     .navbar-toggler__icon--middle-bar {
@@ -42,6 +55,8 @@
     }
     .navbar-toggler__icon--bottom-bar {
       margin-top: 25px;
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
       transform: rotate(0deg);
     }
   }
