@@ -337,7 +337,7 @@ html {
 }
 
 .frame__form {
-  height: 470px;
+  height: 470px !important;
 }
 
 .frame__map {
